@@ -4,22 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
         <nav>
-            <h1>MONEY HEIST</h1>
+            <img src="./assets/sti-removebg-preview.png">
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <!-- <h1>SHARK TANK INDIA</h1> -->
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="seasons.html">SEASONS</a></li>
+                <li><a href="sharks.html">SHARKS</a></li>
+                <li><a href="pitches.html">PITCHES</a></li>
+                <li><a href="deals.html">DEALS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
         </nav>
     </header>
-    <main>
-        <section class="hero"> </section>
-        <section class="about"></section>
-        <section class="episodes"></section>
-        <section class="characters"></section>
-    </main>
-    <footer></footer>
+    <section id="hero">
+        <h2>Where Ideas Meet Investment</h2>
+        <p>Explore Sharks,Startups & Deals from Shark Tank India</p>
+        <button onclick="location.href='sharks.html'">Explore Sharks</button>
+    </section>
+    
+    <footer>
+        <p>© 2026 Shark Tank India | Fan Made Project</p>
+    </footer>
 
-<script src="script.js"></script>    
+<script src="./js/script.js"></script>    
 </body>
 </html>
