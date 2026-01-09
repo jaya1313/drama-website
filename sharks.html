@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="./assets/sti-removebg-preview.png">
+            <div class="menu-toggle" id="menu-toggle">
+                ☰
+            </div>
+            <!-- <h1>SHARK TANK INDIA</h1> -->
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="seasons.html">SEASONS</a></li>
+                <li><a href="sharks.html">SHARKS</a></li>
+                <li><a href="pitches.html">PITCHES</a></li>
+                <li><a href="deals.html">DEALS</a></li>
+                <li><a href="gallery.html">GALLERY</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+          <section class="page-title">
+            <h2>Meet the Sharks</h2>
+            <p> India's leading investors & entrepreneurs</p>
+          </section>
+
+          <section class="sharks-grid">
+            <div class="sharks-card"
+                data-name="Aman Gupta"
+                data-company="boAt"
+                data-expertise="Branding & Consumer Electronics"
+                data-seasons="1,2,3">
+            </div>
+
+            <div class="sharks-card"
+                data-name="Anupam Mittal"
+                data-company="Shaadi.com"
+                data-expertise="Internet & Startups"
+                data-seasons="1,2,3">
+            </div>
+
+            <div class="sharks-card"
+                data-name="Namita Thapar"
+                data-company="Emcure Pharmaceuticals"
+                data-expertise="Healthcare & pharma"
+                data-seasons="1,2,3">
+            </div>
+
+            <div class="sharks-card"
+                data-name="Peyush Bansal"
+                data-company="Lenskart"
+                data-expertise="Retail & Technology"
+                data-seasons="1,2,3">
+            </div>
+
+            <div class="sharks-card"
+                data-name="Vineeta Singh"
+                data-company="Sugar Cosmetics"
+                data-expertise="D2C & Marketing"
+                data-seasons="1,2,3">
+            </div>
+
+            <div class="sharks-card"
+                 data-name="Amit Jain"
+                 data-company="CarDekho"
+                 data-expertise="Tech & Automobiles"
+                 data-seasons="2,3">
+            </div>
+          </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Shark Tank India | Fan Made Project</p>
+    </footer>
+
+    <div class="modal" id="sharkModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h3 id="modalName"></h3>
+            <p id="modalCompany"></p>
+            <p id="modalExpertise"></p>
+            <p id="modalSeasons"></p>
+        </div>
+    </div>
+
+<script src="./js/script.js"></script>
+    
+</body>
+</html>
