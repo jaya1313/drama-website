@@ -4,7 +4,7 @@ menuToggle.addEventListener("click",()=>{
     navLinks.classList.toggle("show");
 });
 
-const sharkCards=document.querySelectorAll(".shark-card");
+const sharkCards=document.querySelectorAll(".sharks-card");
 const modal=document.getElementById("sharkModal");
 const closeModal=document.getElementById("closeModal");
 
@@ -32,3 +32,17 @@ modal.addEventListener("click",(e) =>{
         modal.classList.remove("show");
     }
 });
+document.addEventListener("keydown",(e)=>{
+    if(e.key==="escape"){
+        modal.classList.remove("show");
+    }
+});
+
+// filtering and search bar js
+
+const SeasonFilter=document.getElementById("seasonFilter");
+const searchInput=document.getElementById("searchInput");
+
+function filterSharks( {
+    con
+})
