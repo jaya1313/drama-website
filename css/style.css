@@ -227,7 +227,7 @@ footer{
     transform: scale(0.9);
     transition: transform 0.3s ease;
 }
-.modal.show.modal-content{
+.modal.show .modal-content{
     transform: scale(1);
 }
 .modal-content h3{

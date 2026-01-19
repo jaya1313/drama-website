@@ -43,6 +43,26 @@ document.addEventListener("keydown",(e)=>{
 const SeasonFilter=document.getElementById("seasonFilter");
 const searchInput=document.getElementById("searchInput");
 
-function filterSharks( {
-    con
-})
+function filterSharks() {
+    const seasonValue=SeasonFilter.value;
+    const searchValue=searchInput.value.toLowerCase();
+
+    sharkCards.forEach(card =>{
+        const seasons=card.dataset.seasons;
+        const name=card.dataset.name.toLowerCase();
+        const company=card.dataset.company.toLowerCase();
+        
+        const matchesSeason= seasonValue==="all" || seasons.includes(seasonValue);
+        const matchesSearch=name.includes(searchValue) || company.includes(searchValue);
+        
+        if(matchesSeason && matchesSearch) {
+            card.style.display="block";
+        }
+        else{
+            card.style.display="none";
+        }
+    });
+}
+
+SeasonFilter.addEventListener("change",filterSharks);
+searchInput.addEventListener("input",filterSharks);
