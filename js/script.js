@@ -223,3 +223,64 @@ deals.forEach(deal =>{
     
 });
 }
+
+const pitches = [
+    {
+        name: "Skippi Ice Pops",
+        founders: "Ravi & Anuja Kabra",
+        industry: "Food & Beverages",
+        ask: "₹45L for 5%",
+        askValuation: "₹9 Cr",
+        status: "Deal",
+        summary: "India's first ice pops brand offering high-quality fruit flavors.",
+        season: 1
+    },
+    {
+        name: "Flatheads",
+        founders: "Ganesh Balakrishnan",
+        industry: "Footwear",
+        ask: "₹75L for 3%",
+        askValuation: "₹25 Cr",
+        status: "No Deal",
+        summary: "An emotional pitch for breathable bamboo sneakers; founders chose to pivot.",
+        season: 2
+    },
+    {
+        name: "Sippline",
+        founders: "Rohit Warrier",
+        industry: "Personal Hygiene",
+        ask: "₹15L for 15%",
+        askValuation: "₹1 Cr",
+        status: "No Deal",
+        summary: "A 'drinking shield' for glass rims that became a viral meme in Season 1.",
+        season: 1
+    },
+    {
+        name: "Snitch",
+        founders: "Siddharth Dungarwal",
+        industry: "Fashion",
+        ask: "₹1.5Cr for 0.5%",
+        askValuation: "₹300 Cr",
+        status: "Deal",
+        summary: "Fast-fashion brand for men that impressed all Sharks with high sales.",
+        season: 2
+    }
+];
+const pitchesGrid=document.getElementById("pitches-grid");
+if(pitchesGrid){
+    pitches.forEach(pitch =>{
+        const card1=document.createElement("div");
+        card1.classList.add("pitch-card");
+        card1.innerHTML=`
+    <h3>${pitch.name}</h3>
+    <p><strong>Founders:</strong>${pitch.founders}</p>
+    <p><strong>Industry:</strong>${pitch.industry}</p>
+    <p><strong>Ask:</strong>${pitch.ask}</p>
+    <p><strong>Deal:</strong>${pitch.askValuation}</p>
+    <p><strong>Sharks:</strong>${pitch.status}</p>
+    <p><strong>Sharks:</strong>${pitch.summary}</p>
+    <p><strong>Season:</strong>${pitch.season}</p>
+    `;
+    pitchesGrid.appendChild(card1);
+    });
+}

@@ -285,3 +285,88 @@ footer{
     border-radius: 20px;
     font-weight: 600;
 }
+.gallery{
+    display: flex;  
+}
+#search {
+    width: 100%; padding: 12px; margin-bottom: 30px;
+    border: 1px solid #ddd; border-radius: 8px; font-size: 16px;
+}
+.grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+.pitch-card h3{
+    color: #facc15;
+    margin-bottom: 10px;
+}
+.pitch-card p{
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: #e5e7eb;
+}
+.pitch-card{
+    background:#0b1220;
+    border-radius: 12px;
+    border: 2px solid #0b1220;
+    box-shadow:0px 4px 8px #facc15;
+    padding: 15px; 
+    transition: transform 0.3s,box-shadow 0.3s;
+}
+#gallery-grid{
+    width: 100%;
+}
+.g1{
+    width: 100%;
+    height: 700px;
+    background-image: url("../assets/allShark.png");
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.item{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.item img{
+   width: 45%;
+   height: 280px;
+   object-fit: cover;
+   border-radius: 10px;
+}
+.item img:hover{
+    transform: translateY(-5px);
+}
+.item .text{
+    width: 55%;
+}
+.text h3{
+    color: #facc15;
+    margin-bottom: 10px;
+    font-size: 40px;
+    text-align: center;
+    /* margin-left: 75px; */
+}
+.text p{
+    font-size: 30px;
+    margin-bottom: 6px;
+    color: #e5e7eb;
+    text-align: center;
+    /* margin-left: 40px; */
+}
+.item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+@media(max-width: 768px) {
+    .item{
+        flex-direction: column;
+    }
+    .item img,.item .text{
+        width: 100%;
+    }
+}
