@@ -27,16 +27,40 @@
             </ul>
         </nav>
     </header>
-    <section id="hero">
-        <h2>Where Ideas Meet Investment</h2>
-        <p>Explore Sharks,Startups & Deals from Shark Tank India</p>
-        <button onclick="location.href='sharks.html'">Explore Sharks</button>
-    </section>
-    
-    <footer>
-        <p>© 2026 Shark Tank India | Fan Made Project</p>
-    </footer>
+    <section class="hero-video">
+        <video autoplay muted loop playsinline>
+            <source src="assets/shark-tank-bg2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Where Ideas Meet Investment</h1>
+            <p>Explore Sharks,Startups & Deals from Shark Tank India</p>
+            <button onclick="location.href='sharks.html'" class="hero-btn">Explore Sharks</button>
+            <button onclick="location.href='deals.html'" class="hero-btn">Explore Deals</button>
+            <button onclick="location.href='seasons.html'"class="hero-btn">Watch Now</button>
 
+        </div>
+    </section>
+    <section class="stats-section">
+        <div class="stat-card">
+            <h3 class="count" data-target="250">0</h3>
+            <p>₹ Crores Invested</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="count" data-target="150">0</h3>
+            <p>Startups Funded</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 class="count" data-target="10">0</h3>
+            <p>Sharks</p>
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 Shark Tank India. All rights reserved. Licensed by Sony Pictures Networks India. | Fan Made Project</p>
+    </footer>
 <script src="./js/script.js"></script>    
 </body>
 </html>
