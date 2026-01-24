@@ -4,6 +4,22 @@ menuToggle.addEventListener("click",()=>{
     navLinks.classList.toggle("show");
 });
 
+//home page
+const counters=document.querySelectorAll(".count");
+counters.forEach(counter=>{
+    const target=Number(counter.dataset.target);
+    let count=0;
+    const Interval=setInterval(() =>{
+        count++;
+        counter.textContent=count+"+ ";
+
+        if(count===target){
+            clearInterval(Interval);
+        }
+    },20);
+})
+
+
 const sharkCards=document.querySelectorAll(".sharks-card");
 const modal=document.getElementById("sharkModal");
 const closeModal=document.getElementById("closeModal");
@@ -13,34 +29,34 @@ const modalCompany=document.getElementById("modalCompany");
 const modalExpertise=document.getElementById("modalExpertise");
 const modalSeasons=document.getElementById("modalSeasons");
 
-if(modal && closeModal){
+// if(modal && closeModal){
 
-sharkCards.forEach(card=>{
-    card.addEventListener("click",()=>{
-        modalName.textContent=card.dataset.name;
-        modalCompany.textContent="Company: "+card.dataset.company;
-        modalExpertise.textContent="Expertise: " + card.dataset.expertise;
-        modalSeasons.textContent="Seasons: "+card.dataset.seasons;
+// sharkCards.forEach(card=>{
+//     card.addEventListener("click",()=>{
+//         modalName.textContent=card.dataset.name;
+//         modalCompany.textContent="Company: "+card.dataset.company;
+//         modalExpertise.textContent="Expertise: " + card.dataset.expertise;
+//         modalSeasons.textContent="Seasons: "+card.dataset.seasons;
 
-        modal.classList.add("show");
-    });
-});
+//         modal.classList.add("show");
+//     });
+// });
 
-closeModal.addEventListener("click",()=>{
-    modal.classList.remove("show");
-});
+// closeModal.addEventListener("click",()=>{
+//     modal.classList.remove("show");
+// });
 
-modal.addEventListener("click",(e) =>{
-    if(e.target===modal){
-        modal.classList.remove("show");
-    }
-});
-document.addEventListener("keydown",(e)=>{
-    if(e.key==="escape"){
-        modal.classList.remove("show");
-    }
-});
-}
+// modal.addEventListener("click",(e) =>{
+//     if(e.target===modal){
+//         modal.classList.remove("show");
+//     }
+// });
+// document.addEventListener("keydown",(e)=>{
+//     if(e.key==="escape"){
+//         modal.classList.remove("show");
+//     }
+// });
+// }
 
 // filtering and search bar js
 
@@ -284,3 +300,13 @@ if(pitchesGrid){
     pitchesGrid.appendChild(card1);
     });
 }
+
+const faqItems = document.querySelectorAll(".faq-item");
+
+faqItems.forEach(item => {
+    const question = item.querySelector(".faq-question");
+
+    question.addEventListener("click", () => {
+        item.classList.toggle("active");
+    });
+});
